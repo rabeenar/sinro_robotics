@@ -66,5 +66,6 @@ int main() {
         ld6=1;
         ld7=0;
         break;
-    }}
+    }delay(5000);
+    }
     

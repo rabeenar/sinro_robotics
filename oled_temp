@@ -198,24 +198,24 @@ void loop()
   data=digitalRead(swit);
   if(data==1)
   {
-  delay(6000);
-  temp=Temp.readTemperature();
-    if(temp>40&&temp<30)
+    delay(6000);
+    temp=Temp.readTemperature();
+    if((temp<40) && (temp>30))
     {
-    tone(buzzer, 1000);
-    delay (1000);
-    display.clearDisplay(); //for Clearing the display
-    display.drawBitmap(0, 0, x, 128, 64, WHITE); // display.drawBitmap(x position, y position, bitmap data, bitmap width, bitmap height, color)
-    display.display();
-    noTone(buzzer);
-    delay(1000);
-    }
-    else
-    {
-    noTone(buzzer);
+     noTone(buzzer);
      display.clearDisplay(); //for Clearing the display
      display.drawBitmap(0, 0, tick, 128, 64, WHITE); // display.drawBitmap(x position, y position, bitmap data, bitmap width, bitmap height, color)
      display.display();
+    }
+    else
+    {
+      tone(buzzer, 1000);
+      delay (1000);
+      display.clearDisplay(); //for Clearing the display
+      display.drawBitmap(0, 0, x, 128, 64, WHITE); // display.drawBitmap(x position, y position, bitmap data, bitmap width, bitmap height, color)
+      display.display();
+      noTone(buzzer);
+      delay(1000);
     }
   
   }

@@ -1,0 +1,16 @@
+#include <stdio.h>
+struct complex
+{
+float real;
+int img;
+};
+int main() {
+    struct complex *ptr,complex1;
+    ptr=&complex1;
+    scanf("%f",&ptr->real);
+    scanf("%d",&ptr->img);
+    printf("%f\n",ptr->real);
+    printf("%d",ptr->img);
+
+    return 0;
+}

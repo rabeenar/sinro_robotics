@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+typedef struct Complex
+{
+    float real;
+    float image; 
+}complex;
+void addnum(complex a,complex b,complex *result);
+
+int main() 
+{
+    struct Complex a,b,result;
+    printf("Enter 2 complex number:real,imaginary");
+    scanf("%f%f",&a.real,&a.image);
+    scanf("%f%f",&b.real,&b.image);
+    addnum(a,b,&result);
+    printf("%.2f+i%.1f",result.real,result.image);
+    return 0;
+}
+void addnum(complex a,complex b,complex *result)
+{
+  result->real= a.real+b.real;
+  result->image=a.image+b.image;
+  
+}

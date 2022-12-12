@@ -1,0 +1,47 @@
+//Write a structure to store the names, salary and hours of work per day of 10 employees in a company. Write a program to increase the salary depending on the number of hours of work per day as follows and then print the name of all the employees along with their final salaries.
+//Hours of work per day 	8 	10 	>=12
+//Increase in salary 	$50 	$100 	$150 
+#include <stdio.h>
+struct Employee
+{
+    char name[10];
+    int salary;
+    int hours;
+    int final;
+};
+struct Employee read()
+{
+    struct Employee e;
+    scanf("%s",&e.name);
+    scanf("%d",&e.salary);
+    scanf("%d",&e.hours);
+    return(e);
+}
+int main() {
+    struct Employee emp[10];
+    for(int i=0;i<=1;i++)
+    {
+    printf("Enter the Name,Basic salary,number of working hours of employee:%d",i);
+    emp[i]=read();
+    printf("Employee Name=%s, basic salary=%d,number of working hours of employee=%d\n",emp[i].name,emp[i].salary,emp[i].hours);
+    }
+    for(int i=0;i<=1;i++)
+    {
+      if(emp[i].hours==8)
+      {
+          emp[i].final=emp[i].salary+(30*50);
+      }
+       if(emp[i].hours==10)
+      {
+          emp[i].final=emp[i].salary+(30*100);
+      }
+       if(emp[i].hours==12)
+      {
+          emp[i].final=emp[i].salary+(30*150);
+      }
+      printf("Employee Name=%s, Final salary=%d,number of working hours of employee=%d\n",emp[i].name,emp[i].final,emp[i].hours);
+      
+    }
+
+    return 0;
+}

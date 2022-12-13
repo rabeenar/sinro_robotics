@@ -1,0 +1,71 @@
+#include <stdio.h>
+#include<string.h>
+
+struct book
+{
+    int an;
+    char title[30];
+    char author[30];
+    int issued;
+};
+void display(struct book b)
+{
+    printf("Accession number-\t%d\nBook-\t%s\nAuthor-\t%s\n",b.an,b.title,b.author);
+    if(b.issued==0)
+    {
+        printf("Issued-\tNo\n");
+    }
+    else{
+         printf("Issued-\tYes\n");
+    }
+    
+}
+void add()
+{
+    int *number_of_book ;
+    struct book *b1[10];
+    for(int n=0;n<=1;n++)
+    {
+        scanf("Accession number= %d\nAuthor= %s\nTitle= %s Total number= %d",b1[n].an,b1[n].title,b1[n].title,b1[n].issued);
+    } 
+}
+void book_by_author(struct book *b,int number_of_book,char auth[])
+{
+    int i;
+    for(i=0;i<number_of_book;i++)
+    {
+        if(strcmp(b+i)->author,auth)
+        {
+            display(*(b+i));
+        }
+    }
+}
+void book_by_title()
+{
+    
+}
+void issue_a_book(struct book b)
+{
+    b.issue=1;
+}
+
+int main() {
+   
+   printf("Press the obtion below:\n1 - Display book information\n2 - Add a new book\n3 - Display all the books in the library of a particular author\n4 - Display the number of books of a particular title\n5 - Display the total number of books in the library\n6 - Issue a book);
+   scanf("%d",&s)
+   switch (s)
+   {
+       case 1: 
+        for(int n=0;n<=1;n++)
+        {
+            display(b1[n]);
+            printf("\n\n");
+        }
+        break;
+        case 2:
+        add
+   {
+       
+   }
+    return 0;
+}
